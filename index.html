@@ -36,6 +36,8 @@
 						</div>
 					</section>
 
+
+		
 				<!-- Section -->
 					<section id="first">
 						<header>
@@ -84,6 +86,40 @@
 							
 
 				
+
+                <!-- Section -->
+<section>
+    <header>
+        <h2>Generación de Incrustaciones Universales de Imágenes con Google Universal Image Embedding (GUIE)</h2>
+    </header>
+    <div class="content">
+        <p><strong>Resumen</strong><p>El proyecto se enfoca en la creación de incrustaciones de imágenes de dimensión 64 para cualquier imagen de entrada. Estas incrustaciones se utilizan para llevar a cabo búsquedas de imágenes similares mediante la distancia euclidiana, promoviendo la capacidad de crear modelos sin necesidad de datos de entrenamiento previos, en lo que se conoce como un enfoque "zero-shot".</p>
+
+        <p><strong>Componentes Clave:</strong></p>
+
+        <p><strong>CLIP ViT-H:</strong> Es un modelo desarrollado por OpenAI que comprende tanto imágenes como palabras, y es capaz de relacionarlas. Diseñado para alinear incrustaciones de imágenes y texto.</p>
+
+        <p><strong>Reducción de Dimensionalidad:</strong> Dado que CLIP ViT-H genera incrustaciones de 1024 dimensiones, es necesario reducirlas a 64 dimensiones. Presentamos dos enfoques para esta reducción:</p>
+
+        <ol>
+            <li><strong>PCA en Espacio de Texto:</strong> Este método identifica las dimensiones más relevantes de la incrustación de texto mediante un análisis de componentes principales (PCA) en el espacio de incrustación de texto. Los pesos de PCA se transfieren al codificador de visión, generando así una incrustación de imagen de 64 dimensiones.</li>
+
+            <li><strong>Selección Aleatoria de Neuronas:</strong> Este enfoque consiste en la selección aleatoria de 64 de las 1024 neuronas en la incrustación de imagen.</li>
+        </ol>
+
+        <p><strong>Aplicación:</strong></p>
+
+        <p>El modelo genera incrustaciones de imágenes de 64 dimensiones que posteriormente se utilizan para recuperar imágenes similares</p>
+
+        <p>Se usa el enfoque "zero-shot" que busca imágenes similares sin necesidad de enseñarle al modelo cada imagen específica de antemano</p>
+        
+        <span class="image main"><img src="images/INPUT.jpg" alt="" /></span>
+    </div>
+</section>
+
+
+
+
 
 				<!-- Section -->
 					<section>
